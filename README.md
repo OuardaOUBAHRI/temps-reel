@@ -1,2 +1,5 @@
 # temps-reel
-examen 
+
+Conception d'une solution embarquée en
+temps réel
+Examen sous forme de TP
