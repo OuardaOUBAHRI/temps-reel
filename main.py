@@ -5,6 +5,9 @@ import threading
 
 stop_thread = False
 tank= []
+stock1= []
+stock2= []
+
 
 
 ################################################################################
@@ -19,12 +22,13 @@ class my_task(threading.Thread):
 
 
     	############################################################################
-	def __init__(self, name, period, execution_time, fifo_write = 0):
+	def __init__(self, name, period, execution_time, fifo_write = 0, PRIORITY = 0):
 
 		self.name = name
 		self.period = period
 		self.execution_time = execution_time
 		self.fifo_write = fifo_write
+        self.PRIORITY = PRIORITY
 		
 		threading.Thread.__init__(self)
 
@@ -70,10 +74,10 @@ if __name__ == '__main__':
 
 	# Instanciation of task objects
 
-	task_list.append(my_task(name="pump_1", period=5, execution_time=2, fifo_write=10))
-	task_list.append(my_task(name="pump_2", period=15, execution_time=3, fifo_write=20))
-	##task_list.append(my_task(name="machine_1", period=5, execution_time=5))
-	##task_list.append(my_task(name="machine_2", period=5, execution_time=3))
+	task_list.append(my_task(name="pump_1", period=5, execution_time=2, fifo_write=10, PRIORITY= 100))
+	task_list.append(my_task(name="pump_2", period=15, execution_time=3, fifo_write=20, PRIORITY= 100))
+	task_list.append(my_task(name="machine_1", period=5, execution_time=5, PRIORITY= 1))
+	task_list.append(my_task(name="machine_2", period=5, execution_time=3, PRIORITY= 1))
 	
 
 
