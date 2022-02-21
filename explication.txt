@@ -1,0 +1,13 @@
+Pour le moment, le programme permet de remplir la tank. 
+La prochaine étape est de rajouter une condition qui arrêtera l'execution de pump1 et pump2 lorsque la tank sera remplie à 50. 
+A cette étape, il faudrait diminuer la priority de ces deux tasks et augmenter celles de machine1 et machine2. 
+
+Lors de l'execution de machine1 : 
+del tank[0] * 25 
+puis on créé le permeir moteur
+print( "motor" + nb_moter) 
+
+Lors de l'execution de machine2 : 
+del tank[0] * 5 
+puis on créé un wheel
+print( "wheel" + nb_wheel) 
